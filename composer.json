@@ -1,0 +1,29 @@
+{
+    "name": "kevinlebrun/password.php",
+    "description": "Helpers for password generation and validation",
+    "keywords": ["password", "generate", "validate", "util", "helper"],
+    "homepage": "https://github.com/kevinlebrun/password.php",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Kevin Le Brun",
+            "email": "lebrun.k@gmail.com",
+            "homepage": "http://kevinlebrun.fr",
+            "role": "developer"
+        }
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=5.3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*",
+        "squizlabs/php_codesniffer": "1.*"
+    },
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-0": { "Password": "lib/" }
+    }
+}
