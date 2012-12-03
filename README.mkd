@@ -1,4 +1,4 @@
-# kiwi [![Build Status](https://secure.travis-ci.org/kevinlebrun/password.php.png)](http://travis-ci.org/kevinlebrun/password.php?branch=master)
+# Password [![Build Status](https://secure.travis-ci.org/kevinlebrun/password.php.png)](http://travis-ci.org/kevinlebrun/password.php?branch=master)
 
 ## Usage
 
