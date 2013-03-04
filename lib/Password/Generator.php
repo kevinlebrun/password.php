@@ -16,21 +16,29 @@ class Generator
     public function setMinLength($minLength)
     {
         $this->minLength = $minLength;
+
+        return $this;
     }
 
     public function setNumberOfUpperCaseLetters($numberOfUpperCaseLetters)
     {
         $this->numberOfUpperCaseLetters = $numberOfUpperCaseLetters;
+
+        return $this;
     }
 
     public function setNumberOfNumbers($numberOfNumbers)
     {
         $this->numberOfNumbers = $numberOfNumbers;
+
+        return $this;
     }
 
     public function setNumberOfSymbols($numberOfSymbols)
     {
         $this->numberOfSymbols = $numberOfSymbols;
+
+        return $this;
     }
 
     public function generate()
