@@ -26,26 +26,36 @@ class Validator
     public function setMinLength($minLength)
     {
         $this->minLength = $minLength;
+
+        return $this;
     }
 
     public function setMinLowerCaseLetters($minLowerCaseLetters)
     {
         $this->minLowerCaseLetters = $minLowerCaseLetters;
+
+        return $this;
     }
 
     public function setMinUpperCaseLetters($minUpperCaseLetters)
     {
         $this->minUpperCaseLetters = $minUpperCaseLetters;
+
+        return $this;
     }
 
     public function setMinNumbers($minNumbers)
     {
         $this->minNumbers = $minNumbers;
+
+        return $this;
     }
 
     public function setMinSymbols($minSymbols)
     {
         $this->minSymbols = $minSymbols;
+
+        return $this;
     }
 
     public function isValid($string)
