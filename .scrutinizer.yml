@@ -2,11 +2,16 @@ filter:
     excluded_paths:
         - vendor/*
 
-tools:
-    php_analyser: true
+before_commands:
+    - "composer install --no-interaction"
 
-    php_code_sniffer: true
-        config: ./phpcs.xml
+tools:
+    php_analyzer: true
+
+    php_code_sniffer:
+        enabled: true
+        config:
+            ruleset: ./phpcs.xml
 
     php_sim: true
     php_cpd: false
@@ -16,3 +21,5 @@ tools:
     php_pdepend: true
 
     sensiolabs_security_checker: true
+
+    php_code_coverage: true
