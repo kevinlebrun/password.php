@@ -23,4 +23,5 @@ if ($validator->isValid($password)) {
     printf('password %s is valid' . PHP_EOL, $password);
 } else {
     printf('password %s is invalid' . PHP_EOL, $password);
+    var_dump($validator->getErrors());
 }

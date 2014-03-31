@@ -1,4 +1,10 @@
-# Password [![Build Status](https://secure.travis-ci.org/kevinlebrun/password.php.png)](http://travis-ci.org/kevinlebrun/password.php?branch=master)
+# Password
+
+[![Build Status](https://secure.travis-ci.org/kevinlebrun/password.php)](http://travis-ci.org/kevinlebrun/password.php?branch=master)
+[![Coverage Status](https://coveralls.io/repos/kevinlebrun/password.php/badge.png)](https://coveralls.io/r/kevinlebrun/password.php)
+
+[![Latest Stable Version](https://poser.pugx.org/kevinlebrun/password.php/v/stable.png)](https://packagist.org/packages/kevinlebrun/password.php)
+[![Total Downloads](https://poser.pugx.org/kevinlebrun/password.php/downloads.png)](https://packagist.org/packages/kevinlebrun/password.php)
 
 ## Usage
 
@@ -14,6 +20,37 @@ Installation via composer is highly recommended.
 
     $ curl -s https://getcomposer.org/installer | php
     $ php composer.phar install
+
+
+```php
+#!/usr/bin/env php
+<?php
+
+require __DIR__ . '/vendor/autoload.php';
+
+$generator = new \Password\Generator;
+$generator->setMinLength(8);
+$generator->setNumberOfUpperCaseLetters(2);
+$generator->setNumberOfNumbers(2);
+$generator->setNumberOfSymbols(1);
+
+$password = $generator->generate();
+echo 'password: ' . $password . PHP_EOL;
+
+$validator = new \Password\Validator(new \Password\StringHelper);
+$validator->setMinLength(5);
+$validator->setMinLowerCaseLetters(2);
+$validator->setMinUpperCaseLetters(1);
+$validator->setMinNumbers(1);
+$validator->setMinSymbols(3);
+
+if ($validator->isValid($password)) {
+    printf('password %s is valid' . PHP_EOL, $password);
+} else {
+    printf('password %s is invalid' . PHP_EOL, $password);
+    var_dump($validator->getErrors());
+}
+```
 
 ## Test
 
