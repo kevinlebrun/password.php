@@ -59,16 +59,21 @@ class StringHelper
 
     protected function isNumber($letter)
     {
-        return ord(0) <= ord($letter) && ord($letter) <= ord(9);
+        return $this->isCharBetween(0, 9, $letter);
     }
 
     protected function isLowerCase($letter)
     {
-        return ord('a') <= ord($letter) && ord($letter) <= ord('z');
+        return $this->isCharBetween('a', 'z', $letter);
     }
 
     protected function isUpperCase($letter)
     {
-        return ord('A') <= ord($letter) && ord($letter) <= ord('Z');
+        return $this->isCharBetween('A', 'Z', $letter);
+    }
+
+    protected function isCharBetween($i, $j, $char)
+    {
+        return ord($i) <= ord($char) && ord($char) <= ord($j);
     }
 }
