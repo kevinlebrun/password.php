@@ -59,6 +59,10 @@ if ($validator->isValid($password)) {
     $ bin/phpunit
     $ bin/phpcs --standard=phpcs.xml -p .
 
+## Contributors
+
+ * Mustafa Navruz <https://github.com/navruzm>
+
 ## License
 
 (The MIT License)
