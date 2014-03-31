@@ -2,10 +2,8 @@
 
 [![Build Status](https://secure.travis-ci.org/kevinlebrun/password.php.png)](http://travis-ci.org/kevinlebrun/password.php?branch=master)
 [![Coverage Status](https://coveralls.io/repos/kevinlebrun/password.php/badge.png)](https://coveralls.io/r/kevinlebrun/password.php)
-
 [![Latest Stable Version](https://poser.pugx.org/kevinlebrun/password.php/v/stable.png)](https://packagist.org/packages/kevinlebrun/password.php)
 [![Total Downloads](https://poser.pugx.org/kevinlebrun/password.php/downloads.png)](https://packagist.org/packages/kevinlebrun/password.php)
-
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/kevinlebrun/password.php/badges/quality-score.png?s=ed00f0e0c5a4315c63ab9fc6c23d32d8c58a9987)](https://scrutinizer-ci.com/g/kevinlebrun/password.php/)
 
 ## Usage
