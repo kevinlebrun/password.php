@@ -54,7 +54,7 @@ class GeneratorTest extends \PHPUnit_Framework_TestCase
 
     public function testCanGenerateUniquePasswordWithSymbols()
     {
-        $generator = new Generator(8);
+        $generator = new Generator();
         $generator->setNumberOfSymbols(5);
         $password = $generator->generate();
 
