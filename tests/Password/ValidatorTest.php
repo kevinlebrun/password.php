@@ -53,4 +53,44 @@ class ValidatorTest extends \PHPUnit_Framework_TestCase
         assertTrue($validator->isValid('!pass.word'));
         assertFalse($validator->isValid('1N3RD007'));
     }
+
+    public function testReturnsErrorCodeWhenLengthIsInvalid()
+    {
+        $validator = new Validator(new StringHelper);
+        $validator->setMinLength(8);
+        $validator->isValid('foo');
+        assertContains($validator::INVALID_LENGTH, $validator->getErrors());
+    }
+
+    public function testReturnsErrorCodeWhenLowerCaseCountIsInvalid()
+    {
+        $validator = new Validator(new StringHelper);
+        $validator->setMinLowerCaseLetters(5);
+        $validator->isValid('FOO');
+        assertContains($validator::INVALID_COUNT_LOWER_CASE_LETTERS, $validator->getErrors());
+    }
+
+    public function testReturnsErrorCodeWhenUpperCaseCountIsInvalid()
+    {
+        $validator = new Validator(new StringHelper);
+        $validator->setMinUpperCaseLetters(5);
+        $validator->isValid('foo');
+        assertContains($validator::INVALID_COUNT_UPPER_CASE_LETTERS, $validator->getErrors());
+    }
+
+    public function testReturnsErrorCodeWhenNumbersCountIsInvalid()
+    {
+        $validator = new Validator(new StringHelper);
+        $validator->setMinNumbers(1);
+        $validator->isValid('foo');
+        assertContains($validator::INVALID_COUNT_NUMBERS, $validator->getErrors());
+    }
+
+    public function testReturnsErrorCodeWhenSymbolsCountIsInvalid()
+    {
+        $validator = new Validator(new StringHelper);
+        $validator->setMinSymbols(1);
+        $validator->isValid('foo');
+        assertContains($validator::INVALID_COUNT_SYMBOLS, $validator->getErrors());
+    }
 }
