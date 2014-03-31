@@ -1,0 +1,18 @@
+filter:
+    excluded_paths:
+        - vendor/*
+
+tools:
+    php_analyser: true
+
+    php_code_sniffer: true
+        config: ./phpcs.xml
+
+    php_sim: true
+    php_cpd: false
+
+    php_mess_detector: true
+
+    php_pdepend: true
+
+    sensiolabs_security_checker: true
