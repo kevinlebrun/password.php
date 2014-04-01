@@ -61,6 +61,7 @@ if ($validator->isValid($password)) {
 
 ## Contributors
 
+ * Pierre Rambaud <https://github.com/PierreRambaud>
  * Mustafa Navruz <https://github.com/navruzm>
 
 ## License
